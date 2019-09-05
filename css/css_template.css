@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*@group general styles 一般样式
+-------------------------------------------*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/*瀑布流中的盒子都是绝对定位上去的*/
+#main{
+	position: relative;
+}
+
+.box{
+	padding:15px 0 0 15px;
+	float: left;
+}
+
+.box img{
+	width: 230px;
+	height: auto;
+}
+
+.pic{
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #CCCCCC; 
+}
+
+/*@group helper styles 辅助样式
+-------------------------------------------*/
+
+/*@group page structure 页面结构
+-------------------------------------------*/
+
+/*@group page component 页面组件
+-------------------------------------------*/
+
+/*@group overrides 覆盖
+-------------------------------------------*/
