@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="page-box">
+			
+		</div>
+	</body>
+	<style type="text/css">
+		
+		#page-box{
+			font-size: 15px;
+			font-weight: bold;
+		}
+		
+		#page-box .result{
+			
+		}
+		
+		#page-box a{
+			text-decoration: none;
+			color:black;
+			transition: all 0.18s linear
+		}
+		#page-box a:hover{
+			color:#00a1d6;
+		}
+		
+		#page-box .page-number{
+			margin-right:2px;
+			
+			/*border:1px solid red;*/
+		}
+		
+		#page-box .dian{
+			margin:0 2px ;
+			
+			/*border:1px solid deepskyblue;*/
+		}
+	
+		#page-box .current{
+			margin:0 5px;
+			color:#00a1d6;
+			/*border:1px solid yellowgreen;*/
+		}
+		
+		#page-box .prev{
+			margin:0 5px;
+			/*border:1px solid gold;*/
+		}
+		
+		#page-box .next{
+			margin:0 5px;
+			/*border:1px solid gold;*/
+		}
+		
+	</style>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript" src="../js/easy-page.js" ></script>
+	<script type="application/javascript">
+		$(function(){
+			window.PAGE.initPage("","#page-box");
+		});
+	</script>
+</html>
