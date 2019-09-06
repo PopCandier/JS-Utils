@@ -1,3 +1,4 @@
+
 /*
 *  2019/9/4
 *  Author : Pop
@@ -8,7 +9,8 @@ $(document).ready(function(){
     /**
      * 分页对象
      */
-    window.PAGE={
+    window.PAGE=function(){
+    	return {
         option:{
             page:0,//当前多少页
             limit:10,//每页显示多少
@@ -252,5 +254,7 @@ $(document).ready(function(){
                 error: function (data) {err(data)}
             });
         }
+    } 
+    	
     }
 });
