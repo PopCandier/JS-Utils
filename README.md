@@ -9,7 +9,10 @@
 <script type="text/javascript" src="../js/easy-page.js" ></script>
 <script type="application/javascript">
 		$(function(){
-			window.PAGE.initPage("","#page-box");
+			var page=new window.PAGE();
+			var page1 = new window.PAGE();
+			page.initPage("","#paging-box");
+			page1.initPage("","#paging-box1");
 		});
 </script>
 ```
