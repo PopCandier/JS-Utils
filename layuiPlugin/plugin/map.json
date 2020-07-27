@@ -1,0 +1,36 @@
+{
+	"code": 200,
+	"data": [{
+		"value": 1,
+		"text": "孤岛",
+		"img":"./img/The_Island_Map.jpg"
+	}, {
+		"value": 2,
+		"text": "中心岛",
+		"img":"./img/The_Center_Map.jpg"
+	}, {
+		"value": 3,
+		"text": "焦土",
+		"img":"./img/Scorched_Earth_Map.jpg"
+	}, {
+		"value": 4,
+		"text": "瓦尔盖罗",
+		"img":"./img/Valguero_Map.jpg"
+	}, {
+		"value": 5,
+		"text": "仙境",
+		"img":"./img/"
+	}, {
+		"value": 6,
+		"text": "灭绝",
+		"img":"./img/Extinction_Map.jpg"
+	}, {
+		"value": 7,
+		"text": "畸变",
+		"img":"./img/Aberration_Map.jpg"
+	}, {
+		"value": 8,
+		"text": "水晶岛",
+		"img":"./img/Crystal_Isles_Map.jpg"
+	}]
+}

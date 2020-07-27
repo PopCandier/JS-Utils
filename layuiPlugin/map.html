@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="plugin/tag.css" />
+		<link rel="stylesheet" href="plugin/easy-map.css" />
+	</head>
+	<body>
+		<!-- <div class="layui-btn-container tag" lay-filter="demo" lay-allowclose="true" lay-newTag="true">
+		    <button lay-id="11" type="button" class="tag-item">网站设置</button>
+		    <button lay-id="22" type="button" class="tag-item">用户管理</button>
+		    <button lay-id="33" type="button" class="tag-item">权限分配</button>
+		    <button lay-id="44" type="button" class="tag-item">商品管理</button>
+		    <button lay-id="55" type="button" class="tag-item">订单管理</button>
+		    <!--自定义新增标签按钮元素 button-new-tag -->
+		    <!--<button type="button" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius button-new-tag">+ New Tag</button>
+			</div> -->
+			
+		<!-- <div class="resource-content" >
+			<span class="resource-name" title="实名使命摩登时代发送到发送到">铁矿</span>
+			<div class="resource-color">
+				<div class="resource-close">x</div>
+			</div>
+		</div> -->
+		
+		<div id="test2" style="margin-left: 30px;"></div>
+		<div class="map-container">
+			
+		</div>
+		
+	</body>
+	<script src="layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="plugin/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="plugin/jcanvas.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		layui.config({
+			base: 'plugin/'
+		}).use(['map','jquery','layer','colorpicker','form'], function() {
+			
+			
+			var map = layui.map,
+			$ =layui.jquery,
+			layer = layui.layer,
+			colorpicker = layui.colorpicker,
+			form = layui.form;
+			// width 600 height 500 中等大小
+			map.render({
+				id:"map",
+				size:"middle",
+				container:".map-container",
+				x:"80",
+				y:"90",
+				cross:true,
+				queryLayer:"./plugin/map.json",//查询图层的接口，该接口将会查询可以被添加的地图总览
+				saveLayer:"",//当用户点击保存按钮的时候，会保存改图层全部数据的接口
+				importLayer:"",//将保存的数据导入的接口
+			});
+		
+			
+		})
+	</script>
+</html>

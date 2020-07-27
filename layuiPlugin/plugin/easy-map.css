@@ -1,0 +1,359 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: ghostwhite;
+}
+
+.map-container {
+	z-index: 1;
+	margin: 10% auto;
+	/* border: 2px solid #1E9FFF; */
+}
+
+.map-container1 {
+	z-index: 1;
+	margin: 20% auto;
+	/* border: 2px solid #1E9FFF; */
+}
+
+.currentSelectResourceShow {
+	position: absolute;
+	top: 15%;
+}
+
+/**
+ * 将原生的layer.css的拉下框变小
+ */
+.layui-form-select dl {
+	max-height: 120px;
+}
+
+/*
+ 区域描述弹出样式
+*/
+.tooltip {
+	position: absolute;
+	margin-left: 20px;
+	width: 300px;
+	height: 400px;
+	border-left: 2px solid black;
+	/* border:1px solid red; */
+	box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+	background-color: white;
+}
+
+.tooltip::after {
+	content: "";
+	position: absolute;
+	top: 20%;
+	/*从左侧弹出*/
+	left: 0%;
+	margin-left: -40px;
+	border-width: 20px;
+	border-style: solid;
+	border-color: transparent #1E9FFF transparent transparent;
+}
+
+.area-desc-content {
+	margin: 3% auto;
+	/* border:1px solid red; */
+	width: 95%;
+	height: 50%;
+
+}
+
+.area-desc-img {
+	width: 100%;
+	height: 40%;
+	/* border:1px solid red; */
+}
+
+.area-desc-title {
+	width: 100%;
+	margin-bottom: 10px;
+	/* border:1px solid red; */
+	word-wrap: break-word;
+	word-break: normal;
+	border-left: 3px solid #1E9FFF;
+}
+
+.area-desc-label {
+	font-size: 25px;
+	padding-left: 10px;
+
+}
+
+.area-desc-item {
+	text-indent: 30px;
+	/* font-size: 1px; */
+}
+
+.area-desc-close {
+	text-align: center;
+	width: 25px;
+	height: 25px;
+	font-size: 18px;
+	position: absolute;
+	left: 91.5%;
+	background-color: white;
+	color: black;
+}
+
+.area-desc-close:hover {
+	cursor: pointer;
+	background-color: red;
+	color: white;
+}
+
+/*
+	悬浮框的样式
+*/
+.coordinate-panel {
+	z-index: 5;
+	width: 200px;
+	height: 30px;
+	background-color: black;
+	position: absolute;
+	border-radius: 5px;
+	font-size: 14px;
+	color: white;
+	opacity: 0.8;
+}
+
+.coordinate-panel .lon,
+.coordinate-panel .lat {
+	position: relative;
+	width: 47%;
+	height: 80%;
+	margin-left: 2%;
+	margin-top: 5%;
+	float: left;
+}
+
+.coordinate-panel .lon .key,
+.coordinate-panel .lon .value,
+.coordinate-panel .lat .key,
+.coordinate-panel .lat .value {
+	position: relative;
+	margin-left: 11%;
+	margin-top: -5%;
+	float: left;
+}
+
+.container-map-map {
+	position: absolute;
+	/*background-color: #ddd;*/
+	/* border: 1px solid #ddd; */
+}
+
+.coordinate-xpanel {
+	z-index: 2;
+	position: relative;
+	height: 30px;
+	float: left;
+	background-color: black;
+	color: white;
+}
+
+.coordinate-ypanel {
+	z-index: 2;
+	position: relative;
+	width: 45px;
+	float: left;
+	background-color: black;
+	color: white;
+}
+
+/**
+ * 横坐标 标尺css
+ */
+.ruler-x-high {
+	height: 10px;
+	width: 0.1px;
+	border-left: 1px solid white;
+	display: block;
+	float: left;
+	position: absolute;
+}
+
+/**
+ * 横坐标标尺
+ */
+.ruler-x-high-value {
+	position: absolute;
+}
+
+.ruler-y-high {
+	height: 10px;
+	width: 20px;
+	margin-left: 25px;
+	border-top: 1px solid white;
+	display: block;
+	/* float: right; */
+	position: absolute;
+}
+
+.ruler-y-high-value {
+	position: absolute;
+}
+
+/**
+ * 菜单样式
+ */
+#map-point-menu,
+#map-area-menu {
+	width: 130px;
+	height: 100px;
+	position: absolute;
+	/* border: 1px solid #000000; */
+}
+
+#map-point-menu ul,
+#map-area-menu ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+}
+
+#map-point-menu ul li,
+#map-area-menu ul li {
+	cursor: pointer;
+	color: black;
+	font-size: 13px;
+	padding: 5px;
+	border: 1px solid #000000;
+	border-bottom: none;
+	border-left: 5px solid black;
+	background: white;
+}
+
+#map-point-menu ul li:last-child,
+#map-area-menu ul li:last-child {
+	border-bottom: 1px solid #000000;
+}
+
+#map-point-menu ul li:hover,
+#map-area-menu ul li:hover {
+	color: white;
+	background-color: #000000;
+}
+
+.map-operation-panel {
+	overflow-y: scroll;
+	position: absolute;
+	/* border: 1px solid #ddd; */
+	/* border-left: none; */
+}
+
+
+
+[class^="layer-"] {
+	position: relative;
+	margin: 0 auto;
+	width: 86%;
+	height: 58px;
+	/* border-bottom: 1px solid #ddd; */
+	border-radius: 5px;
+	font-size: 11px;
+	text-align: center;
+	cursor: pointer;
+	color: #393d49;
+	border: 1px solid #dedede;
+	margin-bottom: 10px;
+}
+
+[class^="layer-save-"] {
+	height: 0px;
+	width: 65px;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	top: 36px;
+	left: 135px;
+}
+[class^="layer-save-"]:hover {
+	color: #1E9FFF;
+}
+
+[id^="layer-cancel"] {
+	cursor: pointer;
+	color: red;
+	float: right;
+	margin-right: 5px;
+}
+
+.colors {
+	position: absolute;
+	height: 100px;
+	/* border: 1px solid red; */
+	/* top: 53px; */
+	margin-top: -150px;
+	overflow-y: scroll;
+}
+
+.color-priority {
+	/* height: 38px; */
+	/* border: 1px solid red; */
+}
+
+.color-priority div {
+	border: none;
+}
+
+.selected {
+	background-color: black;
+	color: white;
+}
+
+#selectedColor {
+	border: 2px solid black;
+}
+
+[class^="resource-content-"] {
+	width: 80px;
+	height: 60px;
+	margin-bottom: 12px;
+	float: left;
+}
+
+.resource-name {
+	text-align: center;
+	background-color: #009688;
+	color: white;
+	border: 4px solid #009688;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	cursor: default;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+[class^="resource-color-"] {
+	width: 80%;
+	height: 60%;
+	border: 4px solid #009688;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+[class^="resource-close-"] {
+	width: 30%;
+	height: 50%;
+	text-align: center;
+	/* margin-bottom: 0; */
+	margin-top: 28%;
+	margin-left: 70%;
+	border-radius: 40% 0 0 0;
+	color: black;
+	background-color: none;
+	cursor: pointer;
+	color: white;
+}
+
+[class^="resource-close-"]:hover {
+	color: white;
+	background-color: red;
+}
